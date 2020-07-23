@@ -1,7 +1,6 @@
 package com.example.appiness
 
 import android.content.Context
-import android.util.Log
 import androidx.core.util.Pair
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
@@ -58,10 +57,8 @@ class SearchViewModel() : ViewModel() {
                         try {
                             val jsonObject: JSONObject
                             val code = it.code()
-                            Log.d("exe", "code" + code)
                             if (code == SUCCESS) {
                                 val response: String = it.body()!!.string()
-                                Log.d("exe", "response" + response)
                                 jsonObject = JSONObject(response)
                                 val gson = Gson()
                                 val searchResponse =

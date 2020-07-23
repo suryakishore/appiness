@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     /**
-     * This method is sued to open the main activity
+     * This method is used to open the main activity
      */
     private fun startHomePage() {
         val intent = Intent(this, MainActivity::class.java)

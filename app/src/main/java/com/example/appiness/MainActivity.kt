@@ -14,6 +14,9 @@ import com.example.appiness.databinding.ActivityMainBinding
 import com.example.appiness.searchreponse.SearchPhotosData
 import com.example.appiness.util.MyScrollListener
 
+/**
+ * This activity is sued to show the search results when user typed something with pagination.
+ */
 class MainActivity : AppCompatActivity(), TextWatcher {
 
     lateinit var mBinding: ActivityMainBinding
@@ -51,7 +54,6 @@ class MainActivity : AppCompatActivity(), TextWatcher {
             override fun loadMoreItems() {
                 if (mSearchData.size < mPageCount) {
                     ++mIndex
-                    Log.d("exe", "mIndex  " + mIndex)
                     searchViewModel.getSearchResults(
                         mIndex, mInput
                     )
