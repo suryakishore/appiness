@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Appiness</string>
+    <string name="flick">flick</string>
+    <string name="title">Title :</string>
+    <string name="id">Id :</string>
+    <string name="farm">Farm :</string>
+
+    <string name="flickrData">flickr  search results</string>
+    <string name="search">Please Enter something to get results</string>
+
+
+</resources>
