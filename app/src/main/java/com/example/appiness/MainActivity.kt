@@ -49,7 +49,9 @@ class MainActivity : AppCompatActivity(), TextWatcher {
         mBinding.rvFlickr.layoutManager = layoutManager
         searchViewModel.initializeRetrofit(this)
         mBinding.etSearch.setText(resources.getString(R.string.flick))
+/*
         searchViewModel.getSearchResults(PAGE, resources.getString(R.string.flick))
+*/
         mBinding.rvFlickr.addOnScrollListener(object : MyScrollListener(layoutManager) {
             override fun loadMoreItems() {
                 if (mSearchData.size < mPageCount) {
@@ -95,5 +97,13 @@ class MainActivity : AppCompatActivity(), TextWatcher {
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+    }
+
+
+    public fun runTextCase(input: String) {
+         Log.d("exe","runTextCase")
+        searchViewModel.getSearchResults(PAGE, input)
+
+
     }
 }
